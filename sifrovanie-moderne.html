@@ -82,9 +82,32 @@
 				
 				<div id="text">
 			
-					<h1> Šifrovanie </h1>
-					<p><i> -veda o metódach utajovania významu správ ich prevodom do podoby, ktorá je čitateľná len so špeciálnymi znalosťam, niekedy sa 
-					tento termín používa všeobecnejšie pre vedu o všetkom, čo súvisí so šiframi.</i></p>
+					<h1> Moderné šifry </h1>
+                    <p><i>-aj dnes môžu mať šifry zadné vrátka. Sila šifrovania závisí aj od kvality generátora pseudonáhodných čísel.</i></p>
+
+                    <h3>Symetrické šifry</h3>
+					<ul type=dot>
+                        <li> Prvá štandardizovaná symetrická šifra DES (Data Encryption Standard) </li>
+                        <li> Súčasný kryptografický štandard AES (Advanced Encryption Standard), inak známy ako Rijndael (rozdiel je v tom, že AES podporuje len určité dĺžky blokov a kľúčov) </li>
+                        <li> Finalisti súťaže o návrh šifrovacieho štandardu AES (Advanced Encryption Standard) - Twofish, RC6, Serpent, Mars a Rijndael, ktorý súťaž vyhral a bol prijatý ako štandard AES </li>
+                        <li> Viac informácií nájdete v časti Šifrovanie údajov </li>
+                    </ul>
+
+                    <h3>Asymetrické šifry</h3>
+                    <p>Asymetrická kryptografia - používa súkromný a verejný kľúč. RSA, najpoužívanejšia asymetrická šifra. Známe použitie asymetrických šifier: </p>
+                            <ul type=dot>
+                                <li>PGP ( OpenPGP )</li>
+                                <li>digitálny podpis</li>
+                            </ul>
+
+                    <h3>Hybridné šifry</h3>
+                    <p>Súčasné asymetrické šifrovacie systémy používajú hybridné šifrovanie, ktoré kombinuje výhody asymetrického šifrovania s rýchlosťou symetrických šifier. Samotná správa sa šifruje pomocou symetrického šifrovania s náhodne vygenerovaným kľúčom (tzv. kľúčom relácie, anglicky session key), ktorý sa po zašifrovaní pomalou asymetrickou šifrou pripojí k zašifrovanej správe. </p>
+
+                    <h3>Hašovacie funkcie</h3>
+                    <p>Hašovacia funkcia je jednosmerná matematická funkcia, ktorá sa používa napríklad na zabezpečenie integrity údajov.</p>
+
+                    <h3>Postkvantová kryptografia</h3>
+                    <p>Postkvantová kryptografia sa vzťahuje na klasickú kryptografiu odolnú voči kvantovým počítačom. </p>
 
 				</div>
 			</div>

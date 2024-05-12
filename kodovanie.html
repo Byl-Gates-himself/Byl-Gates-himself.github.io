@@ -4,9 +4,35 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="Content-Language" content="sk">
-	<title> Domov | Ročníková práca </title>
+	<title> Kódovanie | Ročníková práca </title>
+	<link rel="icon" type="Icons/x-icon" href="Icons/div-coding-icon.webp">
 
 <link rel="stylesheet" type="text/css" href="Css/css.css" />
+                    <style>
+                        a:link {
+                          color: #291350;
+                          background-color: transparent;
+                          text-decoration: none;
+                        }
+                        
+                        a:visited {
+                          color: #291350;
+                          background-color: transparent;
+                          text-decoration: none;
+                        }
+                        
+                        a:hover {
+                          color: #d6ecaf;
+                          background-color: transparent;
+                          text-decoration: none;
+                        }
+                        
+                        a:active {
+                          color: #FEFFCC;
+                          background-color: transparent;
+                          text-decoration: none;
+                        }
+                    </style>
 
 </head>
 
@@ -30,11 +56,12 @@
 
 			<div id="menu">
 				<div id="polozky">
-					<p><a href="index.html"> Domov </a></p>
-					<p><a href="kodovanie.html"> Kódovanie </a></p>
-					<p><a href="sifrovanie.html"> Šifrovanie </a></p>
-					<p><a href="index.html"> bar </a></p>
-					<p><a href="galeria.html"> Galeria </a></p>
+					<b>
+					<p><a  href="index.html"> Domov </a></p>
+					<p><a style="text-decoration:none;" href="kodovanie.html"> Kódovanie </a></p>
+					<p><a style="text-decoration:none;" href="sifrovanie.html"> Šifrovanie </a></p>
+					<p><a style="text-decoration:none;" href="galeria.html"> Galeria </a></p>
+					</b>
 				</div>
 			</div>
 
@@ -46,32 +73,22 @@
 				<div id="text">
 			
 					<h1> Kódovanie </h1>
-                    <p><i> -proces, pri ktorom sa každému znaku alebo postupnosti znakov daného súboru znakov (vzorov)
+                    	<p><i> -proces, pri ktorom sa každému znaku alebo postupnosti znakov daného súboru znakov (vzorov)
                         jednoznačne priradí znak alebo postupnosť znakov (obrazov) z iného súboru znakov.</i></p>
-					<p><b> podnadpis </b> TEXT TEXT TEXT TEXT
-							      TEXT TEXT TEXT TEXT
-					</p>
+			
+			<h3>Kódovanie čísel v počítači</h3>
+			<p>Všetky údaje v počítači sú kódované pomocou rôznej kombinácie hodnôt bitov – najmenšej jednotky informácie. Každý z bitov môže nadobúdať iba dve rôzne hodnoty 0 a 1. Tieto bity sú však do pamäťových buniek počítača ukladané po ôsmich, preto je výhodné na zakódovanie údajov použiť vždy taký počet bitov, ktorý je deliteľný ôsmimi (8, 16, 24, 32....). Čím väčší počet bitov použijeme, tým väčší rozsah čísel môžeme použiť. Napríklad pomocou 8 bitov dostaneme 28 = 256 rôznych kombinácií núl a jednotiek. Pomocou 8 bitov teda môžeme zakódovať napríklad čísla od 0 do 255 alebo čísla od -128 do 127 v prípade, že potrebujeme i záporné čísla. Na kódovanie čísiel v počítačoch je najvýhodnejšie použiť jedno „slovo“ (word), t. j. taký počet bitov, ktoré počítač dokáže spracovať počas jednej operácie (jedného taktu procesora). Najmodernejšie počítače dnes používajú 64 bitové slovo, teda dokážu spracovať 64 bitov pri jednej operácii. </p>
 
-					<br></br>
-					<br></br>
+            <h3>Kódovanie znakov</h3>
+            <p>Na rozdiel od čísel, znaky textu nevieme previesť do dvojkovej sústavy, preto bolo potrebné vymyslieť iný spôsob ako jednoznačne priradiť určitému znaku práve jednu kombináciu núl a jednotiek, ktorá tento znak v počítači bude reprezentovať. Keďže neexistuje žiadny univerzálny spôsob ako to urobiť, každý výrobca počítačov tento problém riešil iným spôsobom, preto existuje viacero znakových kódov. Poriadok do tohto chaosu sa snažil zaviesť americký úrad pre normalizáciu, ktorý vyhlásil jeden spôsob, ktorý by mali všetci používať. Tento spôsob kódovania sa volá ASCII – American Standard Code for Information Interchange (Americký štandardný kód pre výmenu informácií).
+
+Tento štandard hovorí, že na zakódovanie každého znaku sa použije 7 bitov. Čo umožňovalo definovať kód pre 128 znakov. Neskôr sa kódovanie rozšírilo na 8 bitov a 256 znakov. Pritom prvá polovica znakov je pre všetky krajiny rovnaká a zvyšných 128 znakov sa pre každú krajinu stanovil podľa ich potrieb. Tento spôsob vniesol do kódovania znakov chaos (veľmi veľké množstvo regionálnych znakových sád), navyše pre znaky niektorých písiem 7-bitový priestor nestačil. Vznikol preto nový spôsob kódovania UNICODE.
+
+Toto kódovanie používa 16 a 24 bitov (2 či 3 bajty) na zakódovanie jedného znaku, čo umožňuje zakódovať cca 1,1 milióna možných znakov. Tento počet znakov umožňuje zakódovať znaky všetkých relevantných abecied pomocou jednej medzinárodnej tabuľky. Toto kódovanie zabezpečuje, že ten istý znak má rovnaký kód v každej krajine i na každom type počítača.
+
+Nevýhodou tohto kódovania je, že znaky, ktoré sme predtým vedeli zakódovať iba ôsmimi bitmi (jedným bajtom) v ACSII, v Unicode sú kódované 16 a 24 bitmi (dvomi a tromi bajtami), a teda zaberajú viac pamäte ako by zaberal text v kódovaní ASCII. Istým riešením tohoto problému je formát UTF-8. V tomto kódovaní je prvých 128 znakov tabuľky ASCII (tieto sú pre všetky krajiny rovnaké) zakódovaných pomocou 8 bitov a zvyšné znaky sú zakódované 16 a 24 či 32 bitmi (t.j. dvomi, tromi alebo štyrmi bajtami). Toto kódovanie je výhodné pre anglicky hovoriace krajiny a krajiny, v ktorých väčšinu znakov textu tvorí len prvých 128 znakov tabuľky ASCII. Ďalšia výhoda je spätná kompatibilita so softvérom, pôvodne navrhnutým pre ASCII resp. 8-bitové znakové sady. </p>
+			
 					
-					<table width=400px border=1px: align=center>
-					<tr>
-						<td colspan=2 align=center> Nadpisovy text tabulky </td>
-					</tr>
-					<tr>
-						<td align=center> wow </td>
-						<td align=center> tabulka </td>
-					</tr>
-					<tr>
-						<td align=center> vec </td>
-						<td align=center> veccccc </td>
-					</tr>
-					<tr>
-						<td align=center> foo </td>
-						<td align=center> bar </td>
-					</tr>
-					</table>
 				</div>
 			</div>
 

@@ -24,13 +24,13 @@
                         a:hover {
                           color: #d6ecaf;
                           background-color: transparent;
-                          text-decoration: none;
+                          text-decoration: underline;
                         }
                         
                         a:active {
                           color: #FEFFCC;
                           background-color: transparent;
-                          text-decoration: none;
+                          text-decoration: underline;
                         }
                     </style>
 
@@ -56,6 +56,7 @@
 
 			<div id="menu">
 				<div id="polozky">
+
 					<b>
 					<p><a style="text-decoration:none;" href="index.html"> Domov </a></p>
 					<p><a style="text-decoration:none;" href="kodovanie.html"> Kódovanie </a></p>
@@ -68,8 +69,8 @@
 					<p><a style="text-decoration:none;" href="sifrovanie-kombinovane.html"> <pre>Kombinované šifry</pre> </a></p>
 					<p><a style="text-decoration:none;" href="sifrovanie-strojom.html"> <pre>Šifrovanie strojom</pre> </a></p>
 					<p><a style="text-decoration:none;" href="sifrovanie-moderne.html"> <pre>Moderné šifry</pre> </a></p>
-                        <b>
 
+                        <b>
 					<p><a style="text-decoration:none;" href="galeria.html"> Galeria </a></p>
 					</b>
 				</div>
@@ -82,9 +83,68 @@
 				
 				<div id="text">
 			
-					<h1> Šifrovanie </h1>
-					<p><i> -veda o metódach utajovania významu správ ich prevodom do podoby, ktorá je čitateľná len so špeciálnymi znalosťam, niekedy sa 
-					tento termín používa všeobecnejšie pre vedu o všetkom, čo súvisí so šiframi.</i></p>
+					<h1> Aditívne šifry </h1>
+					<h3>Vigenèrova šifra</h3>
+					<p>Ide o špeciálny prípad polyalfabetickej šifry. Vigenèrova šifra používa heslo, ktorého znaky určujú posun otvoreného textu tak, že otvorený text rozdelí na bloky znakov dlhé ako heslo a každý znak pripočíta k príslušnému znaku hesla. Cézarova šifra je teda špeciálnym prípadom Vigenèrovej šifry s heslom dĺžky jedného znaku. Vigenèrova šifra spôsobuje zmeny v pravdepodobnostnom rozdelení znakov, čo v podstate znemožňuje kryptoanalýzu založenú na analýze frekvencie znakov v texte. Lúštenie je založené na zistení vzdialenosti dvojíc bigramov alebo trigramov v šifrovom texte a určení ich spoločného deliteľa, ktorý vedie k dĺžke hesla. </p>
+					<ul type=dot><li>Príklad použitia slova HESLO ako šifrovací kľúč:</li></ul>
+
+					<table border=1>
+						<tr align=center>
+							<td align=left><b>otvorený text<b></td>
+							<td> S </td>
+							<td> T </td>
+							<td> A </td>
+							<td> S </td>
+							<td> T </td>
+							<td> N </td>
+							<td> E </td>
+							<td> A </td>
+							<td> V </td>
+							<td> E </td>
+							<td> S </td>
+							<td> E </td>
+							<td> L </td>
+							<td> E </td>
+						</tr>
+						<tr  align=center>
+							<td align=left><b>kľúč<b></td>
+							<td> H </td>
+							<td> E </td>
+							<td> S </td>
+							<td> L </td>
+							<td> O </td>
+							<td> H </td>
+							<td> E </td>
+							<td> S </td>
+							<td> L </td>
+							<td> O </td>
+							<td> H </td>
+							<td> E </td>
+							<td> S </td>
+							<td> L </td>
+						</tr>
+						<tr  align=center>
+							<td align=left><b>šifrovaný text<b></td>
+							<td> A </td>
+							<td> Y </td>
+							<td> T </td>
+							<td> E </td>
+							<td> I </td>
+							<td> V </td>
+							<td> J </td>
+							<td> T </td>
+							<td> H </td>
+							<td> T </td>
+							<td> A </td>
+							<td> J </td>
+							<td> E </td>
+							<td> Q </td>
+						</tr>
+					</table>
+
+                    <h3>Vernamova šifra</h3>
+                    
+                    <p>Vernamova šifra sa v angličtine často nazýva one-time pad, v slovenskom preklade šifra s jednorazovou tabuľkou. Je to jediná známa šifra, ktorej neprelomiteľnosť bola doteraz dokázaná. Podobne ako Vigenèrova šifra pozostáva zo sčítania písmen otvoreného textu a hesla, ale heslo je blok náhodne vybraných údajov rovnakej veľkosti ako otvorený text. Pokiaľ sú splnené podmienky úplne náhodného kľúča rovnakej dĺžky ako samotná správa (a tento kľúč sa nepoužíva opakovane), je táto metóda šifrovania absolútne bezpečná. Dĺžka kľúča však vo všeobecnosti vylučuje použitie tejto metódy na bežné účely; metóda sa používa najmä na veľmi špecializované účely, napr. tzv. horúca linka spájajúca Moskvu a Washington počas studenej vojny používala Vernamovu šifru. Dnes sa používa v kombinácii s kvantovou kryptografiou. </p>
 
 				</div>
 			</div>
